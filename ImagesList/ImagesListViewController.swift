@@ -32,7 +32,6 @@ class ImagesListViewController: UIViewController {
             return imageListCell
         }
     }
-    
     extension ImagesListViewController {
         func configCell(for cell: ImagesListCell, with indexPath: IndexPath) {
             guard let image = UIImage(named: photosName[indexPath.row]) else {
