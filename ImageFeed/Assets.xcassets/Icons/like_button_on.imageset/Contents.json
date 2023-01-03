@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "No Activelike_on Button.png",
+      "filename" : "like_button_on.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "No Activelike_on Button 1.png",
+      "filename" : "like_button_on@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "No Activelike_on Button 2.png",
+      "filename" : "like_button_on@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

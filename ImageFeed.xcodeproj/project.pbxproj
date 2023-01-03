@@ -12,6 +12,8 @@
 		DB1A3139292A4E2900048BEC /* ImagesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1A3138292A4E2900048BEC /* ImagesListViewController.swift */; };
 		DB1A313C292A4E2900048BEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB1A313A292A4E2900048BEC /* Main.storyboard */; };
 		DB1A3141292A4E2B00048BEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB1A313F292A4E2B00048BEC /* LaunchScreen.storyboard */; };
+		DB3EA03F295CC4B800763C7C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3EA03E295CC4B800763C7C /* ProfileViewController.swift */; };
+		DB3EA047295CC5A400763C7C /* SingleImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3EA046295CC5A400763C7C /* SingleImageViewController.swift */; };
 		DB4CB160293E626F000AB452 /* ImagesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4CB15F293E626F000AB452 /* ImagesListCell.swift */; };
 		DB4CB162293E7409000AB452 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB1A313D292A4E2B00048BEC /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -25,6 +27,8 @@
 		DB1A313D292A4E2B00048BEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB1A3140292A4E2B00048BEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB1A3142292A4E2B00048BEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB3EA03E295CC4B800763C7C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		DB3EA046295CC5A400763C7C /* SingleImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleImageViewController.swift; sourceTree = "<group>"; };
 		DB4CB15F293E626F000AB452 /* ImagesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -42,6 +46,8 @@
 		DB1A3128292A4E2800048BEC = {
 			isa = PBXGroup;
 			children = (
+				DB3EA045295CC59400763C7C /* SingleImageView */,
+				DB3EA03D295CC48D00763C7C /* Profile */,
 				DB4CB161293E6419000AB452 /* ImagesList */,
 				DB1A3133292A4E2900048BEC /* ImageFeed */,
 				DB1A3132292A4E2900048BEC /* Products */,
@@ -67,6 +73,22 @@
 				DB1A3142292A4E2B00048BEC /* Info.plist */,
 			);
 			path = ImageFeed;
+			sourceTree = "<group>";
+		};
+		DB3EA03D295CC48D00763C7C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				DB3EA03E295CC4B800763C7C /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		DB3EA045295CC59400763C7C /* SingleImageView */ = {
+			isa = PBXGroup;
+			children = (
+				DB3EA046295CC5A400763C7C /* SingleImageViewController.swift */,
+			);
+			path = SingleImageView;
 			sourceTree = "<group>";
 		};
 		DB4CB161293E6419000AB452 /* ImagesList */ = {
@@ -152,8 +174,10 @@
 			files = (
 				DB1A3139292A4E2900048BEC /* ImagesListViewController.swift in Sources */,
 				DB4CB160293E626F000AB452 /* ImagesListCell.swift in Sources */,
+				DB3EA03F295CC4B800763C7C /* ProfileViewController.swift in Sources */,
 				DB1A3135292A4E2900048BEC /* AppDelegate.swift in Sources */,
 				DB1A3137292A4E2900048BEC /* SceneDelegate.swift in Sources */,
+				DB3EA047295CC5A400763C7C /* SingleImageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
