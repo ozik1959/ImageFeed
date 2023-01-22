@@ -1,9 +1,14 @@
 import UIKit
 
+protocol AuthViewControllerDelegate: AnyObject {
+    func authViewController(_ vc: AuthViewController, didAuthenticateWithCode code: String)
+}
+
+
 final class AuthViewController: UIViewController {
     private let showWebViewIdentifier = "ShowWebView"
     
-    weak var oAuth2Service: OAuth2Service?
+    weak var delegate: AuthViewControllerDelegate?
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == showWebViewIdentifier {
@@ -19,23 +24,22 @@ final class AuthViewController: UIViewController {
 
 extension AuthViewController: WebViewViewControllerDelegate {
     func webViewViewController(_ vc: WebViewViewController, didAuthenticateWithCode code: String) {
-        DispatchQueue.main.async {
+        
+        OAuth2Service.shared.fetchOAuthToken(code) { [weak self] result in
             
-            self.oAuth2Service?.fetchOAuthToken(code) { [weak self] result in
-                guard let self = self else { return }
-                switch result {
-                    
-                case .success(let token):
-                    OAuth2TokenStorage().token = token
-                    print("ok")
-                case .failure(let error):
-                    print(error)
-                }
+            guard let self = self else { return }
+            switch result {
+                
+            case .success(let token):
+                OAuth2TokenStorage.shared.token = token
+               self.delegate?.authViewController(self, didAuthenticateWithCode: token)
+            case .failure(let error):
+                print(error)
             }
         }
     }
-        func webViewViewControllerDidCancel(_ vc: WebViewViewController) {
-            dismiss(animated: true)
-        }
+    func webViewViewControllerDidCancel(_ vc: WebViewViewController) {
+        dismiss(animated: true)
     }
+}
 

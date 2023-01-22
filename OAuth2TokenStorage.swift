@@ -1,5 +1,7 @@
 import Foundation
 class OAuth2TokenStorage {
+    static let shared = OAuth2TokenStorage()
+    
     private let tokenKey = "token"
     var token: String? {
         get {

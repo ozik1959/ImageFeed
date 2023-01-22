@@ -18,6 +18,7 @@
 		DB4CB160293E626F000AB452 /* ImagesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4CB15F293E626F000AB452 /* ImagesListCell.swift */; };
 		DB4CB162293E7409000AB452 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB1A313D292A4E2B00048BEC /* Assets.xcassets */; };
 		DB64241D2969F1B300C9D99D /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB64241C2969F1B300C9D99D /* WebViewViewController.swift */; };
+		DB6429AA297C27AB00FB2676 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6429A9297C27AB00FB2676 /* SplashViewController.swift */; };
 		DB671D30296765E9001B1D24 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB671D2F296765E9001B1D24 /* Constants.swift */; };
 		DB76CC782970220500BF4C3C /* OAuth2TokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB76CC772970220500BF4C3C /* OAuth2TokenStorage.swift */; };
 		DBF22656296866BF00E4AB2E /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF22655296866BF00E4AB2E /* AuthViewController.swift */; };
@@ -37,6 +38,7 @@
 		DB3EA046295CC5A400763C7C /* SingleImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleImageViewController.swift; sourceTree = "<group>"; };
 		DB4CB15F293E626F000AB452 /* ImagesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListCell.swift; sourceTree = "<group>"; };
 		DB64241C2969F1B300C9D99D /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
+		DB6429A9297C27AB00FB2676 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		DB671D2F296765E9001B1D24 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DB76CC772970220500BF4C3C /* OAuth2TokenStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth2TokenStorage.swift; sourceTree = "<group>"; };
 		DBF22655296866BF00E4AB2E /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 		DB1A3128292A4E2800048BEC = {
 			isa = PBXGroup;
 			children = (
+				DB6429A9297C27AB00FB2676 /* SplashViewController.swift */,
 				DB182257296F145D00AF4829 /* ServisAccess */,
 				DBF22654296866B500E4AB2E /* Auth */,
 				DB3EA045295CC59400763C7C /* SingleImageView */,
@@ -216,6 +219,7 @@
 				DB4CB160293E626F000AB452 /* ImagesListCell.swift in Sources */,
 				DB3EA03F295CC4B800763C7C /* ProfileViewController.swift in Sources */,
 				DB1A3135292A4E2900048BEC /* AppDelegate.swift in Sources */,
+				DB6429AA297C27AB00FB2676 /* SplashViewController.swift in Sources */,
 				DB18225A296F14B300AF4829 /* OAuth2Service.swift in Sources */,
 				DBF22656296866BF00E4AB2E /* AuthViewController.swift in Sources */,
 				DB671D30296765E9001B1D24 /* Constants.swift in Sources */,

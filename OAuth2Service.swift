@@ -14,10 +14,10 @@ final class OAuth2Service {
     
     private (set) var authToken: String? {
         get {
-            return OAuth2TokenStorage().token
+            return OAuth2TokenStorage.shared.token
         }
         set {
-            OAuth2TokenStorage().token = newValue
+            OAuth2TokenStorage.shared.token = newValue
         }
     }
     func fetchOAuthToken(_ code: String, completion: @escaping (Result<String,Error>) -> Void) {
@@ -29,6 +29,7 @@ final class OAuth2Service {
                 let authToken = body.accessToken
                 self.authToken = authToken
                 completion(.success(authToken))
+                SplashViewController.splashViewController.switchToTabBarViewController()
             case .failure(let error):
                 completion(.failure(error))
             }
@@ -113,93 +114,3 @@ extension OAuth2Service {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//fileprivate let UnsplashAuthorizeURLString = "https://unsplash.com/oauth/authorize"
-//private enum NetworkError: Error {
-//    case codeError
-//}
-//func fetchAuthToken(_ code: String?, complition: @escaping (Swift.Result<String, Error>) -> Void) {
-//    var urlComponents = URLComponents (string: UnsplashAuthorizeURLString)!
-//    urlComponents.queryItems = [
-//    URLQueryItem(name: "client_id", value: AccessKey),
-//    URLQueryItem(name: "client_secret", value: SecretKey),
-//    URLQueryItem(name: "redirect_uri", value: RedirectURI),
-//    URLQueryItem(name: "code", value: code),
-//    URLQueryItem(name: "grant_type", value: "authorization_code")
-//    ]
-//    let requestURL = urlComponents.url!
-//    print(requestURL)
-//    var request = URLRequest(url: requestURL)
-//    request.httpMethod = "POST"
-//    let task = URLSession.shared.dataTask(with: request) { data, response, erorr in
-//        if let erorr = erorr {
-//            complition(.failure(erorr))
-//        }
-//
-//        if let response = response as? HTTPURLResponse,
-//           response.statusCode < 200 || response.statusCode >= 300 {
-//            complition(.failure(NetworkError.codeError))
-//        }
-//        if let data = data {
-//            print(String(data: data, encoding: .utf8))
-//            do {
-//                let decoder = JSONDecoder()
-//                decoder.keyDecodingStrategy = .convertFromSnakeCase
-//                let response = try decoder.decode(OAuthTokenResponseBody.self, from: data)
-//                DispatchQueue.main.async {
-//                    complition(.success(response.accessToken))
-//                }
-//            } catch let error {
-//                print("token error")
-//                complition(.failure(error))
-//            }
-//        }
-//    }
-//    task.resume()
-//}
-//
-//private struct OAuthTokenResponseBody: Codable {
-//    let accessToken: String
-//    let tokenType: String
-//    let scope: String
-//    let createdAt: Int
-//
-//    enum CodingKeys: String, CodingKey {
-//        case accessToken = "access_token"
-//        case tokenType = "token_type"
-//        case scope
-//        case createdAt = "created_at"
-//    }
-//}
